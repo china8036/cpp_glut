@@ -8,7 +8,7 @@ target = main
 ${target}:$o
 	${cc}  -o $@ main.cpp -lkey -L ${path} ${so} 
 libkey.so: 
-	${cc} -shared -fPIC -c key.cc -o libkey.so
+	${cc} -shared -fPIC -c key.cpp -o libkey.so
 install:
 	rm -rf ${sopath_file}
 	sudo echo "${path}" |cat >>${sopath_file}
